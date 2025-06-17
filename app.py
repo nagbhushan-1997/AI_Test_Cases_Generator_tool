@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import sys
 from datetime import datetime
+st.set_page_config(page_title="AI Test Automation Tool", layout="wide")
 
 # Ensure 'scr/' is in the Python path so imports work
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "scr")))

@@ -16,7 +16,6 @@ def multiply(a, b):
         raise ValueError("Inputs to multiply() cannot be zero.")
     return a * b
 
-
 def divide(a, b):
     """Returns the quotient of a and b. Raises ValueError if either a or b is zero."""
     if a == 0 or b == 0:
