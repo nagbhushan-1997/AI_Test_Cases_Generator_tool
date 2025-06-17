@@ -12247,3 +12247,67 @@ ERROR tests/my_testing_code_test_cases.py
 
 
 ============================================================
+
+============================================================
+Test Generation Log - 2025-06-17 18:29:10
+============================================================
+Original File: scr/my_testing_code.py
+Test File Created: my_testing_code_test_cases.py
+Test File Path: ./tests\my_testing_code_test_cases.py
+
+Code Diff:
+------------------------------
+diff --git a/scr/my_testing_code.py b/scr/my_testing_code.py
+index 879cd03..17a0ec9 100644
+--- a/scr/my_testing_code.py
++++ b/scr/my_testing_code.py
+@@ -20,4 +20,10 @@ def divide(a, b):
+     """Returns the quotient of a and b. Raises ValueError if either a or b is zero."""
+     if a == 0 or b == 0:
+         raise ValueError("Inputs to divide() cannot be zero.")
+-    return a / b
+\ No newline at end of file
++    return a / b
++
++def power(base, exponent):
++    """Returns base raised to the power of exponent. Raises ValueError if base is zero."""
++    if base == 0:
++        raise ValueError("Base cannot be zero.")
++    return base ** exponent
+\ No newline at end of file
+
+Generated Test Cases:
+------------------------------
+# tests.py
+
+import pytest
+from scr.my_testing_code import divide, power
+
+def test_divide_happy_path():
+    assert divide(10, 2) == 5
+
+def test_divide_invalid_input():
+    with pytest.raises(ValueError):
+        divide(0, 2)
+
+def test_power_happy_path():
+    assert power(2, 3) == 8
+
+def test_power_invalid_input():
+    with pytest.raises(ValueError):
+        power(0, 3)
+
+Test Execution Results:
+------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.4.0, pluggy-1.6.0
+rootdir: E:\work_dsi\AI_Test_Automation_tool
+plugins: anyio-4.9.0
+collected 4 items
+
+tests\my_testing_code_test_cases.py ....                                 [100%]
+
+============================== 4 passed in 0.01s ==============================
+
+
+============================================================
