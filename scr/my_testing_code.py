@@ -21,3 +21,9 @@ def divide(a, b):
     if a == 0 or b == 0:
         raise ValueError("Inputs to divide() cannot be zero.")
     return a / b
+
+def power(base, exponent):
+    """Returns base raised to the power of exponent. Raises ValueError if base is zero."""
+    if base == 0:
+        raise ValueError("Base cannot be zero.")
+    return base ** exponent
