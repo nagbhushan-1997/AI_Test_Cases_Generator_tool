@@ -28,7 +28,7 @@ def get_changed_files(repo_path):
     # Filter: Only .py files directly inside the tests/ folder, starting with test_
     filtered_files = [
         f for f in changed_files
-        if f.startswith("./vue_front_end_code/login-widget/src/")
+        if f.startswith("vue_front_end_code/login-widget/src/")
         and f.count("/") == 1  # Ensures it's directly under tests/, not nested like tests/unit/test_abc.py
         
         and f.endswith(".vue")
